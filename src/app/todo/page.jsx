@@ -11,7 +11,7 @@ const ToDoPage = async() => {
                 <div className='grid grid-cols-4 gap-4'>
                     {
                         todo.map(td => 
-                            <div key={td.div} className='mt-4 text-2xl font-medium border-2 border-blue-400 p-2'>
+                            <div key={td.id} className='mt-4 text-2xl font-medium border-2 border-blue-400 p-2'>
                                 <h1>{td.title}</h1>
 
                             </div>

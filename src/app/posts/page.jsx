@@ -8,7 +8,7 @@ const PostPage = () => {
     return (
         <div>
             <Suspense>
-                <Post postPromise={postPromise} key={postPromise.userId} ></Post>
+                <Post postPromise={postPromise} key={postPromise.id} ></Post>
             </Suspense>
         </div>
     );

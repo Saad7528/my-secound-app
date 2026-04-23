@@ -12,6 +12,8 @@ const Navbar = () => {
     <li><Link className={pathname === "/about" ? 'text-blue-600' : ''} href="/about">About </Link></li>
     <li><Link className={pathname === "/count" ? 'text-blue-600' : ''} href="/count">Counter</Link></li>
     <li><Link className={pathname === "/todo" ? 'text-blue-600' : ''} href="/todo">ToDo</Link></li>
+    <li><Link className={pathname === "/posts" ? 'text-blue-600' : ''} href="/posts">Posts</Link></li>
+    <li><Link className={pathname === "/foods" ? 'text-blue-600' : ''} href="/foods">Foods</Link></li>
     
     </>
     return (
