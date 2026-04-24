@@ -1,22 +1,28 @@
+import Image from 'next/image';
 import React from 'react';
 
-const FoodCard = ({food}) => {
+const FoodCard = ({ food }) => {
+    const { dish_name, price, category } = food;
     return (
         <div className="card bg-base-100 shadow-sm">
-            {/* <figure>
-                <img
-                    src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                    alt="Shoes" />
-            </figure> */}
+            <figure>
+                <Image
+                    src={food.image_link}
+                    width={200}
+                    height={200}
+                    alt="Picture of the author"></Image>
+
+            </figure>
             <div className="card-body">
                 <h2 className="card-title">
-                    {food.id}
+                    {dish_name}
                     <div className="badge badge-secondary">NEW</div>
                 </h2>
-                <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
+                <p><small>{category}</small></p>
+                <p>${price}</p>
                 <div className="card-actions justify-end">
-                    <div className="badge badge-outline">Fashion</div>
-                    <div className="badge badge-outline">Products</div>
+                    <button className="btn btn-primary">Accept</button>
+                    <button className="btn btn-ghost">Deny</button>
                 </div>
             </div>
         </div>
