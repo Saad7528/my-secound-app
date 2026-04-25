@@ -17,9 +17,14 @@ const FoodDetailsPage = async ({ params }) => {
                 alt="Picture of the author"></Image>
             <h1 className='text-4xl font-bold text-yellow-300'>{dish_name}</h1>
             <br />
-            <p className='text-2xl'>Main Ingredients: {main_ingredients}</p>
+            <p className='text-2xl text-yellow-300'>Main Ingredients:</p>
+            <ul className='list-disc'>
+                {
+                    main_ingredients.map((item, index) => <li key={index}>{item}</li>)
+                }
+            </ul>
             <br />
-            <p className='text-2xl'>Cooking Steps: {cooking_steps}</p>
+            <p className='text-2xl'><span className='text-2xl text-yellow-300'>Cooking Steps: </span>{cooking_steps}</p>
         </div>
     );
 };
